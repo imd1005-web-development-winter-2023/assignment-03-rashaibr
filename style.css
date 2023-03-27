@@ -210,7 +210,6 @@ select{
   background-color: #f7f5f3;
   cursor: pointer;
   padding:1rem;
-  
   border-radius: 0.5rem;
 }
 .select{
@@ -222,17 +221,7 @@ select{
 }
 .select::after{
   content:"\25BC";
-  position: absolute;
-  border-radius: 0.5rem;
-  background-color:#f7f5f3;
-  top:0px;
-  right:0px;
-  padding:1rem;
-  pointer-events: none;
-}
-.select:hover::after{
-  background-color:#c06c8d;
-  color:#f7f5f3;
+  margin-left: -1.5rem;
 }
 .yourTD{
   display: flex;
