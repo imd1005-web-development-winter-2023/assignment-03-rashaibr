@@ -4,57 +4,50 @@ body{
   margin-right: 1rem;
   margin-top:1rem;
   margin-bottom:1rem;
-  background-color:#eae1d6;
+  background-color:#f0d4dc;
+  background-size: cover;
   color:#487984;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.3rem;
   min-height: 100vh;
 }
 header{
-  color: #ccbfb2;
+  color:#c06c8d;
   font-size: 30px;
-  background-image: url('lake.webp');
+  background-image: url('header.jpg');
   font-family:"bely-display", sans-serif ;
   background-size: cover;
   background-position: center;
   height: 200px;
   position: relative;
   margin: -1rem;
-  
-
-}
-h2{
-  font-family: "espiritu-condensed", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   display: flex;
-  justify-content: left;
-  letter-spacing: 0.5rem;
-  font-size: 50px;
-  
-  font-weight: bolder;
+  justify-content: center;
+
+  margin-bottom: 2rem;
 
 }
 
-h2 input[type="text"]{
+header input[type="text"]{
+
   font-weight: lighter;
   appearance: none;
   background: none;
   outline: none;
   border: none;
-  color:rgb(126, 64, 74);
+  color:rgb(228, 151, 164);
   letter-spacing: 0.5rem;
 
 }
 h3{
   display: flex;
-  justify-content: left;
+  justify-content: center;
   font-family:"bely-display", sans-serif ;
   font-weight:lighter;
   font-style: normal;
   display: flex;
   font-size: 30px;
-  color:#487984;
+  color:#c06c8d;
 }
 section{
   padding-left: 2rem;
@@ -66,11 +59,15 @@ section{
 h4{
   
   display: flex;
-  justify-content: left;
+  justify-content: center;
   margin-bottom: 0.5rem;
   color:rgb(126, 64, 74);
   letter-spacing: 0.2rem;
 }
+
+
+
+
 .options{
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -99,7 +96,7 @@ h4{
   color:#eae1d6
 }
 .options:hover::after{
-  background-color: rgb(126, 64, 74);
+  background-color: #c06c8d;
 }
 header,form{
   
@@ -117,7 +114,7 @@ form input, form button{
   font-size: 2rem;
   background-color:#f7f5f3;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:#487984
+  color:#487984;
 }
 form button{
   margin-left: -1rem;
@@ -127,7 +124,7 @@ form button{
   transition: all 0.2s ease;
 }
 form button:hover{
-  background-color:rgb(126, 64, 74);
+  background-color:#c06c8d;
   color:#f7f5f3;
 }
 .todo_container{
@@ -174,12 +171,9 @@ form button:hover{
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
-.trash-btn:hover,.complete-btn:hover{
-  background-color:rgb(126, 64, 74);
-  color:#f7f5f3;
-}
+
 .complete-btn{
-  background: #487984;
+  background:#c06c8d;
 }
 .todo-item{
   padding: 0rem 2rem;
@@ -197,27 +191,32 @@ form button:hover{
   opacity: 0;
   transition: 0.3s;
 }
-select{
-  appearance:none;
-  outline: none;
-  border: none;
 
-}
-.select{
-  
-  border-radius: 0.5rem;
-  margin:1rem;
-  position:relative;
-  overflow:hidden;
-  color:#487984;
+.filter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 10px;
 }
 select{
-  
+  appearance: none;
+  border: none;
+  outline: none;
+}
+select{
   color:#487984;
   background-color: #f7f5f3;
-  width:15rem;
   cursor: pointer;
   padding:1rem;
+  
+  border-radius: 0.5rem;
+}
+.select{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 .select::after{
   content:"\25BC";
@@ -230,22 +229,22 @@ select{
   pointer-events: none;
 }
 .select:hover::after{
-  background-color:rgb(126, 64, 74);
+  background-color:#c06c8d;
   color:#f7f5f3;
+}
+.yourTD{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   header {
-    font-size: 20px;
-    
+    font-size: 10px;
   }
-  h2{
-    font-size: 1.2rem;
-  }
-  h2 input[type="text"]{
-    font-size: 1.2rem;
-
+  h3{
+    font-size: 25px;
   }
   form input{
     margin-left: 1rem;
@@ -258,17 +257,18 @@ select{
   
   
   .todo-list {
-    min-width: 70%;
+    min-width: 60%;
   }
   
   .todo {
     font-size: 1rem;
     padding: 0;
+
   }
   select {
     width: 10rem;
     padding: 0.5rem;
-    font-size: 1.5rem
+    font-size: 1.5rem;
   }
 
   .select{
