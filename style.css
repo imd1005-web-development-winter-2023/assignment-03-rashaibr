@@ -1,55 +1,271 @@
-/*
-  CSS File
-*/
 
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
-}
-
-/*
-  PAGE / BODY
-*/
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
+body{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  background-color:#f0d4dc;
+  background-size: cover;
+  color:#487984;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.3rem;
   min-height: 100vh;
+}
+header{
+  color:#c06c8d;
+  font-size: 30px;
+  background-image: url('header.jpg');
+  font-family:"bely-display", sans-serif ;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  margin: -1rem;
+  display: flex;
+  justify-content: center;
 
+  margin-bottom: 2rem;
+
+}
+
+header input[type="text"]{
+
+  font-weight: lighter;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  color:rgb(228, 151, 164);
+  letter-spacing: 0.5rem;
+
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+  font-family:"bely-display", sans-serif ;
+  font-weight:lighter;
+  font-style: normal;
+  display: flex;
+  font-size: 30px;
+  color:#c06c8d;
+}
+section{
+  padding-left: 2rem;
+  padding-right:2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h4{
+  
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  color:rgb(126, 64, 74);
+  letter-spacing: 0.2rem;
+}
+
+
+
+
+.options{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.options label{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color:#f7f5f3;
+  cursor: pointer;
+}
+
+.bubble{
+  display:flex;
+  align-items: center;justify-content: center;
+}
+
+.options label:hover{
+  background-color:rgb(126, 64, 74);
+  color:#eae1d6
+}
+.options:hover::after{
+  background-color: #c06c8d;
+}
+header,form{
+  
+  min-height: 20vh;
+  display: flex ;
+  justify-content:center;
+  align-items: center;
+ 
+}
+
+form input, form button{
+  border-radius: 0.5rem;
+  border:none;
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color:#f7f5f3;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#487984;
+}
+form button{
+  margin-left: -1rem;
+  color:#487984;
+  background:#f7f5f3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+form button:hover{
+  background-color:#c06c8d;
+  color:#f7f5f3;
+}
+.todo_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.todo-list{
+  min-width: 30%;
+  list-style: none;
+
+}
+
+.todo{
+  border-radius: 0.5rem;
+  color:#487984;
+  background: #f7f5f3;
+  font-size: 1.5rem;
+  display:flex;
+  align-items: center;
+  
+  transition: all 0.5s ease;
+  justify-content: center;
+  min-width: 20rem;
+  margin-bottom: 1rem;
+}
+
+.todo li{
+  flex:1;
+}
+.trash-btn, .complete-btn{
+  background:#487984;
+  color:#f7f5f3;
+  border:none;
+  padding:1rem;
+  cursor: pointer;
+  font-size: 1rem;
+
+}
+.trash-btn{
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.complete-btn{
+  background:#c06c8d;
+}
+.todo-item{
+  padding: 0rem 2rem;
+}
+.fa-trash, .fa-check{
+  pointer-events: none;
+}
+.completed{
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.fall{
+  transform: translateX(8rem);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.filter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 10px;
+}
+select{
+  appearance: none;
+  border: none;
+  outline: none;
+}
+select{
+  color:#487984;
+  background-color: #f7f5f3;
+  cursor: pointer;
+  padding:1rem;
+  border-radius: 0.5rem;
+}
+.select{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+}
+.select::after{
+  content:"\25BC";
+  margin-left: -1.5rem;
+}
+.yourTD{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*
-  Screen reader text utility class
-*/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+
+@media screen and (max-width: 800px) {
+  header {
+    font-size: 10px;
+  }
+  h3{
+    font-size: 25px;
+  }
+  form input{
+    margin-left: 1rem;
+  }
+  
+  form input, form button {
+    font-size: 1.2rem;
+
+  }
+  
+  
+  .todo-list {
+    min-width: 60%;
+  }
+  
+  .todo {
+    font-size: 1rem;
+    padding: 0;
+
+  }
+  select {
+    width: 10rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .select{
+    min-width: 40%;
+    margin-right: 1rem;
+    
+  }
+
 }
