@@ -1,17 +1,15 @@
- 
+
 //selectors
 const todoInput = document.querySelector('.add-todo');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 const filterOption = document.querySelector(".filter-todo");
-const categoryOption = document.querySelector(".category-option");
 //event listeners
 
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click',deleteCheck);
 filterOption.addEventListener('click', filterTodo);
-categoryOption.addEventListener('click'.categoryOption);
-//functions
+
 
 function addTodo(event){
   //prevent from submitting form
@@ -82,4 +80,3 @@ function filterTodo(e){
       }
   });
   
-}
