@@ -1,55 +1,280 @@
-/*
-  CSS File
-*/
 
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
-}
-
-/*
-  PAGE / BODY
-*/
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
+body{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  background-color:#eae1d6;
+  color:#487984;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.3rem;
   min-height: 100vh;
+}
+header{
+  color: #ccbfb2;
+  font-size: 30px;
+  background-image: url('lake.webp');
+  font-family:"bely-display", sans-serif ;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  margin: -1rem;
+  
 
+}
+h2{
+  font-family: "espiritu-condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: left;
+  letter-spacing: 0.5rem;
+  font-size: 50px;
+  
+  font-weight: bolder;
+
+}
+
+h2 input[type="text"]{
+  font-weight: lighter;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  color:rgb(126, 64, 74);
+  letter-spacing: 0.5rem;
+
+}
+h3{
+  display: flex;
+  justify-content: left;
+  font-family:"bely-display", sans-serif ;
+  font-weight:lighter;
+  font-style: normal;
+  display: flex;
+  font-size: 30px;
+  color:#487984;
+}
+section{
+  padding-left: 2rem;
+  padding-right:2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h4{
+  
+  display: flex;
+  justify-content: left;
+  margin-bottom: 0.5rem;
+  color:rgb(126, 64, 74);
+  letter-spacing: 0.2rem;
+}
+.options{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.options label{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color:#f7f5f3;
+  cursor: pointer;
+}
+
+.bubble{
+  display:flex;
+  align-items: center;justify-content: center;
+}
+
+.options label:hover{
+  background-color:rgb(126, 64, 74);
+  color:#eae1d6
+}
+.options:hover::after{
+  background-color: rgb(126, 64, 74);
+}
+header,form{
+  
+  min-height: 20vh;
+  display: flex ;
+  justify-content:center;
+  align-items: center;
+ 
+}
+
+form input, form button{
+  border-radius: 0.5rem;
+  border:none;
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color:#f7f5f3;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#487984
+}
+form button{
+  margin-left: -1rem;
+  color:#487984;
+  background:#f7f5f3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+form button:hover{
+  background-color:rgb(126, 64, 74);
+  color:#f7f5f3;
+}
+.todo_container{
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
 }
 
-/*
-  Screen reader text utility class
-*/
-.sr-only {
+.todo-list{
+  min-width: 30%;
+  list-style: none;
+
+}
+
+.todo{
+  border-radius: 0.5rem;
+  color:#487984;
+  background: #f7f5f3;
+  font-size: 1.5rem;
+  display:flex;
+  align-items: center;
+  
+  transition: all 0.5s ease;
+  justify-content: center;
+  min-width: 20rem;
+  margin-bottom: 1rem;
+}
+
+.todo li{
+  flex:1;
+}
+.trash-btn, .complete-btn{
+  background:#487984;
+  color:#f7f5f3;
+  border:none;
+  padding:1rem;
+  cursor: pointer;
+  font-size: 1rem;
+
+}
+.trash-btn{
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.trash-btn:hover,.complete-btn:hover{
+  background-color:rgb(126, 64, 74);
+  color:#f7f5f3;
+}
+.complete-btn{
+  background: #487984;
+}
+.todo-item{
+  padding: 0rem 2rem;
+}
+.fa-trash, .fa-check{
+  pointer-events: none;
+}
+.completed{
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.fall{
+  transform: translateX(8rem);
+  opacity: 0;
+  transition: 0.3s;
+}
+select{
+  appearance:none;
+  outline: none;
+  border: none;
+
+}
+.select{
+  
+  border-radius: 0.5rem;
+  margin:1rem;
+  position:relative;
+  overflow:hidden;
+  color:#487984;
+}
+select{
+  
+  color:#487984;
+  background-color: #f7f5f3;
+  width:15rem;
+  cursor: pointer;
+  padding:1rem;
+}
+.select::after{
+  content:"\25BC";
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  border-radius: 0.5rem;
+  background-color:#f7f5f3;
+  top:0px;
+  right:0px;
+  padding:1rem;
+  pointer-events: none;
+}
+.select:hover::after{
+  background-color:rgb(126, 64, 74);
+  color:#f7f5f3;
+}
+
+
+@media screen and (max-width: 600px) {
+  header {
+    font-size: 20px;
+    
+  }
+  h2{
+    font-size: 1.2rem;
+  }
+  h2 input[type="text"]{
+    font-size: 1.2rem;
+
+  }
+  form input{
+    margin-left: 1rem;
+  }
+  
+  form input, form button {
+    font-size: 1.2rem;
+
+  }
+  
+  
+  .todo-list {
+    min-width: 70%;
+  }
+  
+  .todo {
+    font-size: 1rem;
+    padding: 0;
+  }
+  select {
+    width: 10rem;
+    padding: 0.5rem;
+    font-size: 1.5rem
+  }
+
+  .select{
+    min-width: 40%;
+    margin-right: 1rem;
+    
+  }
+
 }
